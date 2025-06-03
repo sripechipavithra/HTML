@@ -1,1 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+/* Sections */
+.section {
+  position: relative;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 10px;
+  float: left;
+  background-color: #f4f4f4;
+}
+
+.section-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ccc;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+/* Colors */
+.chicken {
+  background-color: #ffe5e5;
+}
+.beef {
+  background-color: #e5ffe5;
+}
+.sushi {
+  background-color: #e5e5ff;
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 992px) {
+  .section {
+    width: 31%;
+    margin-right: 3.5%;
+  }
+  .section:nth-child(3) {
+    margin-right: 0;
+  }
+}
+
+/* Tablet: 2 on top, 1 below */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    width: 47%;
+    margin-right: 6%;
+  }
+  .section:nth-child(2) {
+    margin-right: 0;
+  }
+  .section:nth-child(3) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Mobile: stacked */
+@media (max-width: 767px) {
+  .section {
+    width: 100%;
+    margin-right: 0;
+  }
+}
 
